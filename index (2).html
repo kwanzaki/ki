@@ -1,0 +1,741 @@
+
+<!DOCTYPE html>
+<html lang="pt"> 
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Kwanzaki</title>
+<link rel="shortcut icon" href="img/oi.png"/>
+<style type="text/css">
+*{
+	margin: 0;
+	padding: 0;
+	outline: none;
+	font-family: tahoma;
+	box-sizing: border-box;
+}
+body{
+	font-size: 20px;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background: rgba(0,0,0,.9);
+	/*background-image: url("img/c.jfif");*/
+}
+span{
+	color: yellow;
+	font-family: ocr a;
+}
+.btnApostar{
+	top: 13px;
+	color: yellow;
+	font-size: 20px;
+	background: black;
+	padding: 10px 25px;
+	font-family: tahoma;
+	border: 1px solid white;
+	text-decoration: none; 
+	transition: all 0.5s ease;
+	box-shadow: 0 0 5px 1px yellow;
+	border-bottom-left-radius: 20px;
+	border-top-right-radius: 20px;
+}
+.btnApostar:active{
+	transform: scale(0.96);
+}
+.btnApostar:hover{
+	background: yellow;
+	color: rgba(0,0,0,.9);
+	box-shadow: 0 0 5px 1px #999;
+}
+.sTock{
+	color: lime; 
+	padding: 15px;
+	background: green;
+	font-family: tahoma;
+}
+.btnEnviar{
+	width: 100%;
+	color: white;
+	border: none;
+	padding: 12px;
+	cursor: pointer;
+	font-size: 15px;
+	background: lime;
+	margin-top: 1px;
+	border-radius: 5px;
+	transition: all 0.5s ease;
+}
+.btnEnviar:active{
+	transform: scale(0.96);
+}
+.borderMapas{
+	width: 80%;
+	border: 10px solid #333;
+}
+.modal1{
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom:0;
+	opacity: 1; 
+	position: fixed;
+	background: none;
+	visibility: none;
+	align-items: center;
+	justify-content: center;
+}
+.modal2{
+	top: 0;
+	left: 0;
+	right: 0;
+	opacity: 0; 
+	bottom:0;
+	position: fixed;
+	background: none;
+	visibility: hidden;
+	align-items: center;
+	justify-content: center;
+}
+.modal1:target{
+	opacity: 1;
+	z-index: 2;
+	visibility: visible;
+}
+.modal2:target{
+	opacity: 1;
+	z-index: 2;
+	visibility: visible;
+}
+.modalcontent1{
+	top: 15vh;
+	width: 40%; 
+	height: 13vh;
+	padding: 1em;
+	position: fixed;
+	background: #222;
+	position: relative;
+	border: 1px solid #222;
+	border-top: 15px solid #222; 
+	border-left: 18px solid #222;
+	border-bottom: 15px solid #222;
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+}
+.modalcontent2{
+	top: 15vh;
+	width: 40%; 
+	height: 13vh;
+	padding: 1em;
+	position: fixed;
+	background: #222;
+	position: relative;
+	border: 1px solid #222;
+	border-top-left-radius: 0px;
+	border-top: 15px solid #222; 
+	border-left: 18px solid #222;
+	border-bottom: 15px solid #222;
+	border-bottom-left-radius: 0px;
+}
+.eBox{
+		/*
+	background: linear-gradient(45deg, blue, aqua, darkblue);
+	color: white;
+	*/
+	background: linear-gradient(45deg, orangered, orange, orangered);
+	color: #333;
+	border: 1px solid white;
+	box-shadow: 2px 2px 5px orangered;
+	
+	left: 0px;
+	width: 30%;
+	z-index: 9;
+	bottom: 36px;
+	padding: 6px;
+	font-size: 15px;
+	position: fixed;
+	cursor: pointer;
+	border-top-right-radius: 20px;
+	border-bottom-left-radius: 20px;
+}
+.eBox:hover{
+	
+	color: #77ffbb;
+	/*border: 1px solid #77ffbb;
+	background: rgba(0,0,0,0.9);color: white;
+	box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+*/}
+.eCopy{
+	width: 100%;
+	height: 33px;
+  width: 100%;
+	z-index: 4;
+	color: #999;
+	bottom: 0px;
+	font-size:23px;
+	position: fixed;
+	text-align: right;
+	font-family: tahoma;
+	border-top: 1px solid #333;
+	background: rgba(0,0,0,0.9);
+	box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 18px rgba(0, 0, 0, 0.2);
+}
+.eYear{
+	color: #333; /*#5ff1dd;*/
+	font-size:13px;
+	font-family: tahoma;
+}
+.eCY{
+	background: #77ffbb;/*#7ff700;*/
+	color: #333; 
+	font-size:13px;
+	font-family: tahoma;
+	padding: 10px 45px;
+}
+.cTexto{
+	color:#ffbb00;
+}
+table{
+	width: 100%;
+	color: white;
+	font-size: 13px;
+	border-collapse: collapse;
+	border-radius: 12px 12px 0 0;
+}
+.tTR:hover{
+	color: gold;
+	cursor: pointer;
+	background: #444;
+}
+td{ 
+	width: 100%; 
+	padding: 2px;
+	border: 1px solid #555;
+}
+.btnIniciar{
+	width: 100%;
+	color: white;
+	border: none;
+	padding: 12px;
+	cursor: pointer;
+	font-size: 15px;
+	background: lime;
+	margin-top: 10px;
+	text-align: center;
+	border-radius: 5px;
+	transition: all 0.5s ease;
+}
+.btnIniciar:active{
+	transform: scale(0.96);
+}
+.btnServ{
+	width: 100%;
+	color: white;
+	border: none;
+	padding: 12px;
+	cursor: pointer;
+	font-size: 15px;
+	margin-top: 3px;
+	text-align: center;
+	border-radius: 5px;
+	transition: all 0.5s ease;
+	background: rgba(56,21,289,.3);
+}
+.btnServ:active{
+	transform: scale(0.96);
+}
+.iInput{
+	color: #777; 
+	width: 100%; 
+	padding: 10px; 
+	font-size: 15px;
+	background: #111; 
+	text-align: center;
+	border-radius: 5px;
+	border: 1px solid #333;
+	background: rgba(0,0,0,.3);
+}
+header{
+	width: 100%;
+	height: 70px;
+	display: flex;
+	position: fixed;
+	padding: 0 20px;
+	align-items: center;
+	background: rgba(0,0,0,0.9);
+	justify-content: space-between;
+	z-index: 9;
+}
+.menu{
+	order: 2;
+	display: none;
+	cursor: pointer;
+}
+nav ul{
+	display: flex;
+	list-style: none;
+}
+nav ul li{
+	margin: 5px;
+	padding: 5px;
+	color: white;
+	display: block;
+	font-size: 20px;
+	border-radius: 50px;
+	text-decoration: none;
+}
+::-webkit-scrollbar{
+	width: 16px;
+	height: 16px;
+}
+::-webkit-scrollbar-track{
+	background: #ddd;
+}
+::-webkit-scrollbar-thumb{
+	background: #888;
+}
+a{
+	color: #888;
+	text-decoration: none;
+}
+.cElect{
+	z-index: 99;
+	right: 41px;
+	color: #999;
+	bottom: 90px;
+	display: block;
+	cursor: pointer;
+	position: fixed;
+	font-size: 20px;
+	background: #111;
+	padding: 3px 8px 5px;
+	border-radius: 100px;
+	transition: all 0.4s ease;
+	border: 2px solid rgba(255,255,9,.3);
+	animation: animate 1s linear infinite;
+	box-shadow: 0 0 0 2px green,
+				0 0 0 3px deepskyblue;
+animation: El 1s ease-in-out infinite;
+}
+@keyframes El{
+0%{
+	transform: translateY(0);
+}
+50%{
+	transform: translateY(-1px);
+}
+100%{
+	transform: translateY(0);
+}
+}
+.cElect:active{
+	transform: scale(0.90);
+}	
+.alT{
+	opacity: 0;
+	z-index: -999;
+	color: transparent;
+	right: 5px;
+	bottom: 0px;
+	position: fixed;
+	font-size: 0px;
+	padding: 0px;
+	background: transparent;
+}
+
+
+
+
+
+
+
+
+.container #next, 
+.container #prev{
+	bottom: 0;
+	right: 0;
+	font-size: 0px; 
+	position: absolute;
+	color: transparent;
+	z-index: -90;
+}	
+.container .slide{
+	display: none;
+}
+.container .slide.active{
+	border: none;
+	display: block;
+	background: none;
+}
+.container{
+	padding: 5px;
+	color: yellow;
+	border-radius: 5px;
+	border: none;
+	display: block;
+	background: none;
+	z-index: 1;
+	background: none;
+	bottom: 80px;
+	left: 10px;
+	position: fixed;
+}
+.cT{
+	color: #acdf99;
+	margin-top: 2px;
+	background: transparent;
+	font-size: 13px;
+	display: block; 
+    animation: testim .4s ease-in-out forwards;
+}
+@keyframes testim{
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.tEX{
+    animation: start .4s ease-in-out forwards;
+	font-size: 15px;
+}
+@keyframes start{
+    from {
+        opacity: 0;
+        transform: translateY(10%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.ifoto{
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: auto;
+    border-radius: 50%;
+}
+
+
+
+
+
+
+
+.eMapas{
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+
+
+
+
+
+@media only screen and (max-width: 900px){
+.ifoto{
+    width: 45px;
+    height: 45px;
+    margin: auto;
+    border-radius: 50%;
+}
+.cT{
+	font-size: 12px;
+}
+.tEX{
+	font-size: 14px;
+}
+
+
+
+.cElect{
+	right: 15px;
+	bottom: 50px;
+	color: white;
+	font-size: 20px;
+	padding: 3px 8px 5px;
+}
+.cElect:active{
+	transform: scale(0.88);
+}
+.sTock{
+	padding: 0;
+	color: lime; 
+	background: none;
+}
+.horas{
+	font-size: 15px;
+}
+header{
+	height: 60px;
+}
+.menu{
+	order: 1;
+	color: white;
+	display: block;
+	cursor: pointer;
+}
+.menu .le{
+	width: 28px;
+	height: 2px;
+	margin: 5px 0;
+	background: #5ff1dd;
+}
+nav{
+	left: 0;
+	right: 0;
+	top: 60px;
+	height: 0px;
+	width: 100vw;
+	transition: 0.3s;
+	overflow: hidden;
+	position: absolute;
+	background: rgba(2,2,9,0.9);
+}
+nav.active{
+	height: 105px;
+}
+nav ul{
+	opacity: 0;
+	display: block;
+	transition: 0.0s;
+	text-align: center;
+	width: fit-content;
+	margin: 80px auto 0 auto;
+	margin-top: 10px;
+}
+nav.active ul{
+	opacity: 1;
+}
+nav ul li{
+	padding: 8px;
+	background:#222;
+	argin-top: 8px;
+	font-size: 17px;
+	border-top-right-radius: 20px;
+	border-bottom-left-radius: 20px;
+}
+	
+.btnApostar{
+	margin-top: 0px;
+	font-size: 15px;
+	font-size: 18px;
+}
+.eBox{
+	width: 67%;
+	font-size: 13px;
+	color: #333;
+}
+.eCY{
+	padding: 10px 15px;
+}
+.cTexto{
+	color:#ffbb00;
+}
+.modalcontent1{
+	width: 95%; 
+}
+.modalcontent2{
+	width: 95%; 
+}
+.iInput{ 
+	color: #777; 
+	width: 100%; 
+	font-size: 15px;
+	border-radius: 5px;
+}
+.borderMapas{ 
+	width: 100%;
+}
+}
+</style>
+</head>
+<body onload="initClock()">
+<div class="eCopy"><span class="eCY" title="Todos os direitos reservados">&copy; <span class="eYear" id="yeare"></span></span></div>
+<div class="eBox" id="clo" title="Info">Envia dinheiro e ganha dinheiro em 1 hora!</div>
+<a href="mailto:p1335614@gmail.com" title="Contactar" class="cElect" onclick="audio.play()">@</a>
+
+<header>
+		<div class="horas">
+					<a class="btnApostar" href="#modalbox1" title="Apostar" onclick="audio.play()">Enviar</a>
+		</div>
+		<div class="menu" title="Iniciar">
+			
+			<div class="le" onclick="audio.play()"></div>
+			<div class="le" onclick="audio.play()"></div>
+			<div class="le" onclick="audio.play()"></div>
+		
+		</div>
+		<nav>
+			<ul>
+				<li>
+					<span title="Horas"><span id="hour">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span> <span id="period">AM</span></span>
+				</li>
+				<li>
+					<span title="Stock" class="sTock">7939,94 Kz</span>
+				</li>
+			</ul>
+		</nav>
+</header>
+
+
+<span class="eMapas"><center style="border: 1px solid #333; padding: 5px;"><h2>KWANZAKI</h2>
+	<!--<p style="font-size: 12px; color: gold;border: 1px solid #333; padding:3px;">	Serviço financeiro online<!--Somos uma empresa que presta serviços financeiros online.<br/><!--Invista em nossa empresa e ganha sampre!</p>--></center></span>
+
+
+
+
+
+
+<span class=""><!--==================-->
+<center title="">
+<div class="container">
+<div class="slide active">
+<p class="cT"><img src="img/b.jpg" class="ifoto">Kwanzaki<br/><p class="tEX"><i>"Bons serviços, estou amando."</i><p style="color: #acdf99; font-size: 13px;">Fev</p></p></p>
+<div id="next" onclick="next()"> >  </div>
+<div id="prev" onclick="prev()"> < </div>
+</div>
+
+<div class="slide">
+<p class="cT"><img src="img/l.jpg" class="ifoto">Yola<br/><p class="tEX"><i>"Eu amo os vossos serviços."</i><p style="color: #acdf99; font-size: 13px;">Fev</p></p>
+<div id="next" onclick="next()"> > </div>
+<div id="prev" onclick="prev()"> < </div>
+</div>
+	
+<div class="slide">
+<p class="cT"><img src="img/d.png" class="ifoto">Edson<br/><p class="tEX"><i>"A vossa empresa é a melhor."</i><p style="color: #acdf99; font-size: 13px;">Fev</p></p></p>
+<div id="next" onclick="next()"> > </div>
+<div id="prev" onclick="prev()"> < </div>
+</div> 
+</div></center>
+<!--==================-->
+</span>
+
+
+
+
+
+
+<!--modal INFORMAÇÕES-->
+<div id="modalbox1" class="modal1">
+<table class="modalcontent1">
+
+	<thead>
+	<td style="background: #5ff00d; color: #222;">Informções:</td>
+	<td style="background: #111; cursor:pointer; padding: 2px 4px;"><a href="#modalbox2" style="color: orange;" onclick="audio.play()">↻</a></td>
+	</thead>
+	<tbody style="background: rgba(0,0,9,0.9); color: #333; display: block; height: 20vh; border: 1px solid silver; overflow: auto;">
+	<tr>
+	<td class="cTexto" style="font-size: 12px; border: none; padding: 5px;">Acessa a sua conta <b style="color: yellow; background: orangered;">Unitel money</b> e transfer <b style="color: lime; font-family: tahoma; background: green; padding: 1px;">50.00 Kz</b> a este número <b style="color: yellow; background: orangered;">940278820 Unitel money.</b> Após 1 hora, enviaremos <b style="color: lime; font-family: tahoma; background: green; padding: 1px;">60.00<!--(0123456789)--> Kz</b> em sua conta <b style="color: yellow; font-family: tahoma; background: orangered; padding: 1px;">Unitel money.</b></td>
+	</tr>
+	</tbody>
+
+</table>
+</div>
+
+<!--modal SERVIÇOS-->
+<div id="modalbox2" class="modal2">
+<table class="modalcontent2">
+
+	<thead>
+	<td style="background: #5ff00d; color: #222;">Serviços:</td>
+	<td style="background: #111; cursor:pointer; padding: 2px 4px;"><a href="#modalbox1" style="color: orange;" onclick="audio.play()">↺</a></td>
+	</thead>
+	<tbody style="background: rgba(0,0,9,0.9); color: #3ccf8b; display: block; height: 20vh; border: 1px solid silver; overflow: auto;">
+	<tr>
+	<td>60.06 Kz</td>
+	<td>12:00:27</td>
+	<td>94028...</td>
+	</tr>
+	</tbody>
+
+</table>
+</div>
+</div>
+
+<script type="text/javascript">
+//Script ÁUDIO clicks
+	var audio = new Audio();
+	audio.src = 'audio/i.mp3';
+</script>
+
+<script type="text/javascript">
+//Script TEMPO
+	const yeare = document.getElementById('yeare');
+	yeare.textContent = new Date().getFullYear();
+</script>
+
+<script type="text/javascript">
+//Script MENU
+	menu = document.querySelector(".menu");
+	menu.onclick = function(){
+		navBar = document.querySelector("nav");
+		navBar.classList.toggle("active")
+	}
+</script>
+
+<script type="text/javascript">
+//Script POST
+let slides = document.querySelectorAll('.slide');
+let index = 0;
+
+function next(){
+	slides[index].classList.remove('active');
+	index = (index + 1) % slides.length;
+	slides[index].classList.add('active');
+}
+function prev(){
+	slides[index].classList.remove('active');
+	index = (index - 1 + slides.length) % slides.length;
+	slides[index].classList.add('active');
+}
+</script>
+<script>
+//akwanzas CLICKS & CLICKS
+	setInterval("document.getElementById('next').click()", 10000);
+</script>
+
+<script type="text/javascript" charset="utf-8">
+//Script HORAS
+function updateClock(){
+var now = new Date();
+hou = now.getHours(),
+min = now.getMinutes(),
+sec = now.getSeconds(),
+pe = "";
+
+if(hou == 0){
+hou = 00
+}
+if(hou == 0){
+hou = hou - 00;
+pe = "";
+}
+
+Number.prototype.pad = function(digits){
+for(var n = this.toString(); n.length < digits; n = 0 + n);
+return n;
+}
+
+var ids = ["hour", "minutes", "seconds", "period"];
+var values =[hou.pad(2), min.pad(2), sec.pad(2), pe];
+for(var i = 0; i < ids.length; i++)
+document.getElementById(ids[i]).firstChild.nodeValue = values[i];
+}
+function initClock(){
+updateClock();
+window.setInterval("updateClock()", 1);
+}
+</script>
+<a href="https://www.contadorvisitasgratis.com" target="_blank" class="alT" title="Visitas"><img src="https://counter3.optistats.ovh/private/contadorvisitasgratis.php?c=wk1xp84lnfng6zj15999ssps95nxx8p4" border="0"></a>
+
+</body>
+</html>
