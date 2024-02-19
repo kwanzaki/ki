@@ -17,12 +17,11 @@
 body{
 	height: 100vh;
 	font-size: 20px;
-	background: rgba(0,0,0,.9);
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	background: rgba(0,0,0,.9);
+	/*background: rgba(0,0,0,.9);*/
 	background-image: url("img/ki.jfif");
 }
 span{
@@ -49,16 +48,15 @@ span{
 	color: yellow;
 	font-size: 20px;
 	background: black;
-	padding: 10px 25px;
+	padding: 12px 25px;
 	font-family: tahoma;
 	text-decoration: none; 
 	transition: all 0.2s ease;
 	box-shadow: 0 0 5px 1px yellow;
 	border-bottom-left-radius: 20px;
 	border-top-right-radius: 20px;
-	border: 1px solid yellow;
-	border-bottom-right-radius: 3px;
-	border-top-left-radius: 3px;
+	border: 1px solid white;
+	transition: all 0.4s ease;
 }
 .btnApostar:active{
 	transform: scale(0.88);
@@ -301,7 +299,6 @@ nav ul li{
 	background: #888;
 }
 a{text-decoration: none;}
-.cTexto{ font-size: 15px;}
 .alT{
 	opacity: 0;
 	z-index: -999;
@@ -329,7 +326,6 @@ a{text-decoration: none;}
 	transition: all 0.2s ease;
 	border: 2px solid rgba(255,255,9,.3);
 	animation: animate 1s linear infinite;
-	animation: El 1s ease-in-out infinite;
 	box-shadow: 0 0 0 2px green,
 			0 0 0 3px deepskyblue;
 }
@@ -497,12 +493,11 @@ header{
 .btnApostar{
 	margin-top: 0px;
 	font-size: 16px;
-	padding: 10px 18px;
+	padding: 12px 20px;
 }
-.cTexto{ font-size: 13px;}
 .eBox{ color: #77ffbb;
 	width: 67%;
-	font-size: 13px;
+	font-size: 12px;
 	border: 1px solid #77ffbb;
 }
 .eCY{
@@ -528,6 +523,7 @@ td{
 </style>
 </head>
 <body onload="initClock()">
+<img style="position: fixed; z-index: -999; opacity: 0; visibility: hidden;" src="img/oi.png" width="1%">
 <div class="eBox" id="clo" title="Info">Aposte se amanhã terá sol e ganhe dinheiro!</div>
 <a href="mailto:p1335614@gmail.com" title="Info" class="cElect" onclick="audio.play()">@</a>
 <div class="eCopy"><span class="eCY" title="Todos os direitos reservados">&copy; <span class="eYear" id="yeare"></span></span></div>
@@ -555,7 +551,7 @@ td{
 		</nav>
 </header>
 
-
+<img style="position: fixed; z-index: -999; opacity: 0; visibility: hidden;" src="img/oi.png" width="1%">
 <span class="eMapas">
 <!--<img src="e.png" width="56%" class="borderMapas">-->
 
@@ -573,7 +569,7 @@ td{
 	</thead>
 	<tbody style="background: #111; color: #333; display: block; height: 20vh; border: 1px solid silver; overflow: auto;">
 	<tr>
-	<td class="cTexto" style="color:#ffbb00; border: none; padding: 5px;">Acessa a sua conta <b style="color: yellow; background: orangered;">Unitel money</b> e transfer <b style="color: lime; font-family: tahoma; background: green; padding: 1px;">100.00 Kz</b> a este número <b style="color: yellow; background: orangered;">940278820 Unitel money.</b> Após 24 horas, se a sua previsão estiver certa, enviaremos <b style="color: lime; font-family: tahoma; background: green; padding: 1px;">111.00<!--(01234567891011)--> Kz</b> em sua conta <b style="color: yellow; font-family: tahoma; background: orangered; padding: 1px;">Unitel money.</b></td>
+	<td class="cTexto" style="color:#ffbb00; border: none; padding: 5px;">Acessa a sua conta <b style="color: yellow; background: orangered;">Unitel money</b> e transfer <b style="color: lime; font-family: tahoma; background: green; padding: 1px;">50.00 Kz</b> a este número <b style="color: yellow; background: orangered;">940278820 Unitel money.</b> Após 24 horas, se a sua previsão estiver certa, <b style="background: #bc8899;">e em Luanda tiver sol,</b> enviaremos <b style="color: lime; font-family: tahoma; background: green; padding: 1px;">55.00<!--(012345)--> Kz</b> em sua conta <b style="color: yellow; font-family: tahoma; background: orangered; padding: 1px;">Unitel money.</b></td>
 	</tr>
 	</tbody>
 
@@ -590,7 +586,7 @@ td{
 	</thead>
 	<tbody class="cTexto" style="background: #111; color: #3ccf8b; display: block; height: 20vh; border: 1px solid silver; overflow: auto;">
 	<tr>
-	<td>111.05 Kz</td>
+	<td>55.05 Kz</td>
 	<td>12:00:27</td>
 	<td>94028...</td>
 	</tr>
