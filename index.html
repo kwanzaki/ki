@@ -312,26 +312,23 @@ a{text-decoration: none;}
 	background: transparent;
 }
 .cElect{
-	font-family: arial black;
-	font-weight: bold;
-	z-index: 6;
-	right: 35px;
-	color: white; 
-	bottom: 50px;
+	z-index: 99;
+	right: 41px;
+	color: #999;
+	bottom: 90px;
 	display: block;
 	cursor: pointer;
 	position: fixed;
 	font-size: 20px;
-	background: blue;
+	background: #111;
+	padding: 3px 8px 5px;
 	border-radius: 100px;
-	padding: 0.1px 10px 0.1px;
-	transition: all 0.2s ease;
+	transition: all 0.4s ease;
 	border: 2px solid rgba(255,255,9,.3);
 	animation: animate 1s linear infinite;
 	box-shadow: 0 0 0 2px green,
-			0 0 0 3px deepskyblue,
-			0 0 0 6px  #333;
-	animation: El 1s ease-in-out infinite;
+				0 0 0 3px deepskyblue;
+animation: El 1s ease-in-out infinite;
 }
 .cElect:active{
 	transform: scale(0.88);
@@ -435,8 +432,11 @@ a{text-decoration: none;}
 	font-size: 14px;
 }
 .cElect{
-	bottom: 50px;
-	right: 23px;
+	right: 15px;
+	bottom: 55px;
+	color: white;
+	font-size: 20px;
+	padding: 3px 8px 5px;
 }
 .sTock{
 	color: lime; 
@@ -528,7 +528,7 @@ td{
 <body onload="initClock()">
 <img style="position: fixed; z-index: -999; opacity: 0; visibility: hidden;" src="img/oi.png" width="1%">
 <div class="eBox" id="clo" title="Info">Aposte se amanhã terá sol e ganhe dinheiro!</div>
-<a href="https://web.facebook.com/profile.php?id=61556163702447" target="_blank" title="Info" class="cElect" onclick="audio.play()">f</a>
+<a href="https://web.facebook.com/profile.php?id=61556163702447" target="_blank" title="Contactar" class="cElect" onclick="audio.play()">@</a>
 <div class="eCopy"><span class="eCY" title="Todos os direitos reservados">&copy; <span class="eYear" id="yeare"></span></span></div>
 
 <header>
