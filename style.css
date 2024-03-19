@@ -1,0 +1,156 @@
+
+.modal1{
+	overflow: auto; height: 100vh; position: fixed; top: 0px; bottom: 0; right: 0; left: 0;
+	display: flex; align-items: center; justify-content: center; background: rgba(8,0,9,0.9);
+	transition: all 0.4s; visibility: hidden; opacity: 0;
+}
+.modal1:target{visibility: visible; opacity: 1; z-index: 9;}
+.modal2{
+	overflow: auto; height: 100vh; position: fixed; top: 0px; bottom: 0; right: 0; left: 0;
+	display: flex; align-items: center; justify-content: center; background: rgba(8,0,9,0.9);
+	transition: all 0.4s; visibility: hidden; opacity: 0;
+}
+.modal2:target{visibility: visible; opacity: 1; z-index: 9;}
+.modal3{
+	overflow: auto; height: 100vh; position: fixed; top: 0px; bottom: 0; right: 0; left: 0;
+	display: flex; align-items: center; justify-content: center; background: rgba(8,0,9,0.9);
+	transition: all 0.4s; visibility: hidden; opacity: 0;
+}
+.modal3:target{visibility: visible; opacity: 1; z-index: 9;}
+.modal4{
+	overflow: auto; height: 100vh; position: fixed; top: 0px; bottom: 0; right: 0; left: 0;
+	display: flex; align-items: center; justify-content: center; background: rgba(8,0,9,0.9);
+	transition: all 0.4s; visibility: hidden; opacity: 0;
+}
+.modal4:target{visibility: visible; opacity: 1; z-index: 9;}
+.modal5{
+	overflow: auto; height: 100vh; position: fixed; top: 0px; bottom: 0; right: 0; left: 0;
+	display: flex; align-items: center; justify-content: center; background: rgba(8,0,9,0.9);
+	transition: all 0.4s; visibility: hidden; opacity: 0;
+}
+.modal5:target{visibility: visible; opacity: 1; z-index: 9;}
+
+
+.modal6{
+	overflow: auto; height: 100vh; position: fixed; top: 0px; bottom: 0; right: 0; left: 0;
+	display: flex; align-items: center; justify-content: center; background: rgba(8,0,9,0.9);
+	transition: all 0.4s; visibility: hidden; opacity: 0;
+}
+.modal6:target{visibility: visible; opacity: 1; z-index: 9;}
+
+.modal7{
+	overflow: auto; height: 100vh; position: fixed; top: 0px; bottom: 0; right: 0; left: 0;
+	display: flex; align-items: center; justify-content: center; background: rgba(8,0,9,0.9);
+	transition: all 0.4s; visibility: hidden; opacity: 0;
+}
+.modal7:target{visibility: visible; opacity: 1; z-index: 9;}
+
+.modal8{
+	overflow: auto; height: 100vh; position: fixed; top: 0px; bottom: 0; right: 0; left: 0;
+	display: flex; align-items: center; justify-content: center; background: rgba(8,0,9,0.9);
+	transition: all 0.4s; visibility: hidden; opacity: 0;
+}
+.modal8:target{visibility: visible; opacity: 1; z-index: 9;}
+.modal9{
+	overflow: auto; height: 100vh; position: fixed; top: 0px; bottom: 0; right: 0; left: 0;
+	display: flex; align-items: center; justify-content: center; background: rgba(8,0,9,0.9);
+	transition: all 0.4s; visibility: hidden; opacity: 0;
+}
+.modal9:target{visibility: visible; opacity: 1; z-index: 9;}
+
+.modalcontent0{
+	position: fixed;
+	left: 0px;
+	bottom: 70px;
+	background: linear-gradient(20deg, #0f0, #111, #000);;
+	/*background: #77bb33;*/
+	padding: 10px;
+	color: white;
+} 
+.modal0{
+	position: fixed; 
+	background: none;
+	transition: all 0.4s; visibility: hidden; opacity: 0;
+}
+.modal0:target{visibility: visible; opacity: 1; z-index: 9;}
+
+.modalcontent1{
+	overflow: auto;
+	position: fixed;
+	top: 0px;
+	position: relative;
+	background: #060606;
+	width: 40%;
+	height: 220px;
+	padding: 1em;
+	color: olive;
+	border-radius: 5px;
+	border: 1px solid #333;
+	border-top: 15px solid #333; 
+	border-bottom: 15px solid #333;
+}
+
+.cElect{ z-index: 9; 
+	bottom: 40px;
+	right: 30px;
+	color: white;
+	display: block;
+	cursor: pointer;
+	position: fixed;
+	font-size: 18px;
+	background: #111;
+	border-radius: 100px;
+	padding: 5px 8px 7px;
+	transition: all 0.4s ease;
+	border: 2px solid rgba(255,255,9,.3);
+	box-shadow: 0 0 0 2px #222,
+			0 0 0 3px #333, 
+			/*-0px 0 13px 13px lime,
+			*/0 0 0 4px #777;
+	animation: luz 1s ease-in-out infinite;
+}
+@keyframes luz{
+0%{
+border: lime;
+}
+50%{
+border: yellow;
+}
+100%{
+border: lime;
+}
+}
+.cElect:active{
+	transform: scale(0.50);
+}
+
+
+
+@media only screen and (max-width: 800px){
+.modalcontent1{
+	overflow: auto;
+	position: fixed;
+	top: 0px;
+	position: relative;
+	background: #060606;
+	width: 99%;
+	height: 230px;
+	padding: 1em;
+	color: #990;
+	border-radius: 5px;
+	border: 1px solid #333;
+	border-top: 15px solid #333; 
+	border-bottom: 15px solid #333;
+}
+.cElect{
+	bottom: 40px;
+	right: 5px;
+	 padding: 6px 10px 9px;
+	 font-size: 16px;
+	 background: olive;
+	 animation: box 4s all infinite;
+}
+.modalcontent0{
+	background: #aaaf99;
+}
+}

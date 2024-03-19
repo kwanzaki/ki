@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Compra Capital</title>
+<link rel="stylesheet" href="style.css">
+<style type="text/css">
+*{
+	margin: 0;
+	padding: 0;
+	outline: none;
+	font-family: candara;
+	box-sizing: border-box;
+}
+body{	
+	color: #666;
+	font-size: 15px;	
+	background: linear-gradient(80deg, #333, #060606, black, #333); 
+}
+#cc{color: #777; text-shadow: 0 1px gold;}
+a{text-decoration: none;}
+hr{border: 1px solid #990;}
+.el{border: 0.5px solid #999;}
+header{
+	position: fixed; z-index: 999999; top: 0; left: 0;
+	width: 100%; background: linear-gradient(350deg,#040404, #090909, #333); padding: 16px; border-bottom: 1px solid #999;
+}
+.divl{margin-top: 38px;}
+.div3{
+	padding: 5px 15px; color: #fff999; border-radius: 5px; border: 1px solid #888; width: 280px; margin-top: 15px; background: rgba(255,255,255,0.02); backdrop-filter: blur(0px);
+	box-shadow: 3px 3px 0 rgba(255,255,9,0.5);}
+button{cursor: pointer;	transition: all 0.4s ease;
+}
+button:active{
+	transform: scale(0.90);
+}
+.pt{background: olive; padding: 15px; color: white; font-size: 15px; width: 100%;}
+.bt{background: olive;/*5C3317  #4F4F2F*/ padding: 15px; color: white; font-size: 15px; width: 50%; border-radius: 5px; border: none;}
+
+.volt{
+	position: fixed;
+	background: orange;
+	color: white;
+	padding: 10px;
+	font-size: 15px;
+	right: 63px;
+	bottom: 60px;
+	z-index: 99;
+	transition: all 0.4s ease;
+}
+.volt:active{
+	transform: scale(0.60);
+}
+::-webkit-scrollbar{
+	width: 16px;
+	height: 16px;
+}
+::-webkit-scrollbar-track{
+	background: #030303;
+	cursor: pointer;
+}
+::-webkit-scrollbar-thumb{
+	background: #111;
+	cursor: pointer;
+}.container #next, 
+.container #prev{
+	top: 0;
+	right: 0;
+	font-size: 0px; 
+	position: absolute;
+	color: transparent;
+	z-index: -90; 
+	visibility: hidden; 
+	opacity: 0;
+}	
+.container .slide{
+	display: none;
+}
+.container .slide.active{
+	border: none;
+	display: block;
+	background: none;
+}
+.container{
+	color: white;
+	border-radius: 5px;
+	border: none;
+	display: block;
+	background: none; z-index: 1; 
+	background: none;
+	bottom: 70px;
+	left: 0px;
+	position: fixed;
+}
+.tEX{
+    animation: start .4s ease-in-out forwards;
+	font-size: 15px; /*color: #acdf99;*/ padding: 10px; background:#77bb33;
+}
+@keyframes start{
+    from {
+        opacity: 0;
+        transform: translateY(10%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@media only screen and (max-width: 800px){
+.div1{
+	padding: 5px 15px; border-radius: 5px; border: 1px solid #888; display: block; position: ; width: 280px;
+}
+header{
+	width: 100%; background: linear-gradient(350deg, olive, #000, #191919, olive); padding: 16px; border-bottom: 1px solid #990;
+}
+.divl{margin-top: 37px;}
+.el{border: 1px solid #990;}
+.tEX{
+    animation: start .4s ease-in-out forwards;
+	font-size: 15px; color: #acdf99; padding: 10px; background:#77bb33;
+}
+}
+</style>
+</head>
+<body>
+
+<a href="#" title="Info" class="cElect" onclick="audio.play();">@</a>
+<nav></nav>
+
+
+<header>
+<a href="mailto:p1335614@gmail.com" id="cc" onclick="audio.play();">Compra Capital</a>
+</header>
+
+<div id="modalbox0" class="modal0">
+<div class="modalcontent0">
+<span>Agradecemos pela preferência!</span> <a href="#" style="background:transparent; color:white; padding: 5px;" onclick="audio.play();">↺</a>
+</div>
+</div>
+<br/>
+
+
+<span class=""><!--==================-->
+<center title="">
+<div class="container">
+<div class="slide active">
+<p class="tEX">"***878820 Recebeu 10.110,97 Kz."</p>
+<div id="next" onclick="next()"> >  </div>
+<div id="prev" onclick="prev()"> < </div>
+</div>
+
+<div class="slide">
+<p class="tEX">"***871120 Recebeu 1010.97 Kz."</p>
+<div id="next" onclick="next()"> > </div>
+<div id="prev" onclick="prev()"> < </div>
+</div>
+	
+<div class="slide">
+<p class="tEX">"***8788101 Recebeu 505.97 Kz."</p>
+<div id="next" onclick="next()"> > </div>
+<div id="prev" onclick="prev()"> < </div>
+</div> 
+</div></center>
+<!--==================-->
+</span>
+
+
+<center class="divl">
+<div class="div3"><p class="pt">101,25 KZS</p><h2>CC1 0,1%</h2><p>Compre este pacote Capital e beneficie de 0,1% em bônus e mais registros de fidelidades grátis. Construa a sua carteira de riqueza com os nossos serviços. Quanto mais comprares mais ganharás.</p><br/><a href="#modalbox1"><button class="bt" onclick="audio.play();">Comprar</button></a></div>
+<div class="div3"><p class="pt">252,50 KZS</p><h2>CC2 0,2%</h2><p>Compre este pacote Capital e beneficie de 0,2% em bônus e mais registros de fidelidades grátis. Construa a sua carteira de riqueza com os nossos serviços. Quanto mais comprares mais ganharás.</p><br/><a href="#modalbox2"><button class="bt" onclick="audio.play();">Comprar</button></a></div>
+<div class="div3"><p class="pt">505,00 KZS</p><h2>CC3 0,5%</h2><p>Compre este pacote Capital e beneficie de 0,5% em bônus e mais registros de fidelidades grátis. Construa a sua carteira de riqueza com os nossos serviços. Quanto mais comprares mais ganharás.</p><br/><a href="#modalbox3"><button class="bt" onclick="audio.play();">Comprar</button></a></div>
+<div class="div3"><p class="pt">757,50 KZS</p><h2>CC4 0,7%</h2><p>Compre este pacote Capital e beneficie de 0,7% em bônus e mais registros de fidelidades grátis. Construa a sua carteira de riqueza com os nossos serviços. Quanto mais comprares mais ganharás.</p><br/><a href="#modalbox4"><button class="bt" onclick="audio.play();">Comprar</button></a></div>
+<div class="div3"><p class="pt">1010,00 KZS</p><h2>CC5 1,1%</h2><p>Compre este pacote Capital e beneficie de 1,1% em bônus e mais registros de fidelidades grátis. Construa a sua carteira de riqueza com os nossos serviços. Quanto mais comprares mais ganharás.</p><br/><a href="#modalbox5"><button class="bt" onclick="audio.play();">Comprar</button></a></div>
+<div class="div3"><p class="pt">2525,00 KZS</p><h2>CC7 2,5%</h2><p>Compre este pacote Capital e beneficie de 2,5% em bônus e mais registros de fidelidades grátis. Construa a sua carteira de riqueza com os nossos serviços. Quanto mais comprares mais ganharás.</p><br/><a href="#modalbox6"><button class="bt" onclick="audio.play();">Comprar</button></a></div>
+<div class="div3"><p class="pt">5050,00 KZS</p><h2>CC8 5,1%</h2><p>Compre este pacote Capital e beneficie de 5,1% em bônus e mais registros de fidelidades grátis. Construa a sua carteira de riqueza com os nossos serviços. Quanto mais comprares mais ganharás.</p><br/><a href="#modalbox7"><button class="bt" onclick="audio.play();">Comprar</button></a></div>
+<div class="div3"><p class="pt">7575,00 KZS</p><h2>CC6 7,5%</h2><p>Compre este pacote Capital e beneficie de 7,5% em bônus e mais registros de fidelidades grátis. Construa a sua carteira de riqueza com os nossos serviços. Quanto mais comprares mais ganharás.</p><br/><a href="#modalbox8"><button class="bt" onclick="audio.play();">Comprar</button></a></div>
+<div class="div3"><p class="pt">10.100,00 KZS</p><h2>CC9 10,1%</h2><p>Compre este pacote Capital e beneficie de 10,1% em bônus e mais registros de fidelidades grátis. Construa a sua carteira de riqueza com os nossos serviços. Quanto mais comprares mais ganharás.</p><br/><a href="#modalbox9"><button class="bt" onclick="audio.play();">Comprar</button></a></div><br/>
+
+<div id="modalbox1" class="modal1">
+<div class="modalcontent1">
+<p>Envie 100.00 KZS a este nº 940278820 Unitel money, após 5 minutos, enviaremos devolta 101.25 KZS ao seu nº Unitel money.</p>
+<hr width="70%" style="margin-top: 10px; margin-bottom: 5px;">
+<p>Atendemos das 09:00 até às 15:00.</p>
+<p id="yAno" title="Todos os direitos reservados" style="margin-top: 2px; margin-bottom: 2px; font-size:10px;" >&copy; <span id="yeah"></span>.</p><a href="#modalbox0"><button class="bt" onclick="audio.play();">OK</button></a>
+</div>
+</div>
+
+<div id="modalbox2" class="modal2">
+<div class="modalcontent1">
+<p>Envie 250.00 KZS a este nº 940278820 Unitel money, após 5 minutos, enviaremos devolta 252,50 KZS ao seu nº Unitel money.</p>
+<hr width="70%" style="margin-top: 10px; margin-bottom: 5px;">
+<p>Atendemos das 09:00 até às 15:00.</p>
+<p id="yAno" title="Todos os direitos reservados" style="margin-top: 2px; margin-bottom: 2px; font-size:10px;" >&copy; <span id="yh"></span>.</p><a href="#modalbox0"><button class="bt" onclick="audio.play();">OK</button></a>
+</div>
+</div>
+
+<div id="modalbox3" class="modal3">
+<div class="modalcontent1">
+<p>Envie 500.00 KZS a este nº 940278820 Unitel money, após 5 minutos, enviaremos devolta 505,00 KZS ao seu nº Unitel money.</p>
+<hr width="70%" style="margin-top: 10px; margin-bottom: 5px;">
+<p>Atendemos das 09:00 até às 15:00.</p> 
+<p id="yAno" title="Todos os direitos reservados" style="margin-top: 2px; margin-bottom: 2px; font-size:10px;" >&copy; <span id="yea"></span>.</p><a href="#modalbox0"><button class="bt" onclick="audio.play();">OK</button></a>
+</div>
+</div>
+<div id="modalbox4" class="modal4">
+<div class="modalcontent1">
+<p>Envie 700.00 KZS a este nº 940278820 Unitel money, após 5 minutos, enviaremos devolta 757,50 KZS ao seu nº Unitel money.</p>
+<hr width="70%" style="margin-top: 10px; margin-bottom: 5px;">
+<p>Atendemos das 09:00 até às 15:00.</p>
+<p id="yAno" title="Todos os direitos reservados" style="margin-top: 2px; margin-bottom: 2px; font-size:10px;" >&copy; <span id="hy"></span>.</p><a href="#modalbox0"><button class="bt" onclick="audio.play();">OK</button></a>
+</div>
+</div>
+
+<div id="modalbox5" class="modal5">
+<div class="modalcontent1">
+<p>Envie 1000.00 KZS a este nº 940278820 Unitel money, após 5 minutos, enviaremos devolta 1010.00 KZS ao seu nº Unitel money.</p>
+<hr width="70%" style="margin-top: 10px; margin-bottom: 5px;">
+<p>Atendemos das 09:00 até às 15:00.</p>
+<p id="yAno" title="Todos os direitos reservados" style="margin-top: 2px; margin-bottom: 2px; font-size:10px;" >&copy; <span id="ea"></span>.</p><a href="#modalbox0"><button class="bt" onclick="audio.play();">OK</button></a>
+</div>
+</div>
+
+<div id="modalbox6" class="modal6">
+<div class="modalcontent1">
+<p>Envie 2500,00 KZS a este nº 940278820 Unitel money, após 5 minutos, enviaremos devolta 2525,00 KZS ao seu nº Unitel money.</p>
+<hr width="70%" style="margin-top: 10px; margin-bottom: 5px;">
+<p>Atendemos das 09:00 até às 15:00.</p>
+<p id="yAno" title="Todos os direitos reservados" style="margin-top: 2px; margin-bottom: 2px; font-size:10px;" >&copy; <span id="ye"></span>.</p><a href="#modalbox0"><button class="bt" onclick="audio.play();">OK</button></a>
+</div>
+</div>
+
+<div id="modalbox7" class="modal7">
+<div class="modalcontent1">
+<p>Envie 5000.00 KZS a este nº 940278820 Unitel money, após 5 minutos, enviaremos devolta 5050,00 KZS ao seu nº Unitel money.</p>
+<hr width="70%" style="margin-top: 10px; margin-bottom: 5px;">
+<p>Atendemos das 09:00 até às 15:00.</p>
+<p id="yAno" title="Todos os direitos reservados" style="margin-top: 2px; margin-bottom: 2px; font-size:10px;" >&copy; <span id="ya"></span>.</p><a href="#modalbox0"><button class="bt" onclick="audio.play();">OK</button></a>
+</div>
+</div>
+
+<div id="modalbox8" class="modal8">
+<div class="modalcontent1">
+<p>Envie 7500,00 KZS a este nº 940278820 Unitel money, após 5 minutos, enviaremos devolta 7575,00 KZS ao seu nº Unitel money.</p>
+<hr width="70%" style="margin-top: 10px; margin-bottom: 5px;">
+<p>Atendemos das 09:00 até às 15:00.</p>
+<p id="yAno" title="Todos os direitos reservados" style="margin-top: 2px; margin-bottom: 2px; font-size:10px;" >&copy; <span id="yha"></span>.</p><a href="#modalbox0"><button class="bt" onclick="audio.play();">OK</button></a>
+</div>
+</div>
+
+<div id="modalbox9" class="modal9">
+<div class="modalcontent1">
+<p>Envie 10.000,00 KZS a este nº 940278820 Unitel money, após 5 minutos, enviaremos devolta 10.100,00 KZS ao seu nº Unitel money.</p>
+<hr width="70%" style="margin-top: 10px; margin-bottom: 5px;">
+<p>Atendemos das 09:00 até às 15:00.</p>
+<p id="yAno" title="Todos os direitos reservados" style="margin-top: 2px; margin-bottom: 2px; font-size:10px;" >&copy; <span id="yhe"></span>.</p><a href="#modalbox0"><button class="bt" onclick="audio.play();">OK</button></a>
+</div>
+</div>
+</div>
+<hr class="el" size="1" style="position: fixed; width: 100%; bottom: 0px; z-index: 99;"/>
+</center>
+
+<script type="text/javascript">
+//script TEMPO
+	const yeah = document.getElementById('yeah');
+	yeah.textContent = new Date().getFullYear();
+</script>
+
+
+<script type="text/javascript">
+//script TEMPO
+	const yh = document.getElementById('yh');
+	yh.textContent = new Date().getFullYear();
+</script>
+
+
+<script type="text/javascript">
+//script TEMPO
+	const yea = document.getElementById('yea');
+	yea.textContent = new Date().getFullYear();
+</script>
+
+
+<script type="text/javascript">
+//script TEMPO
+	const hy = document.getElementById('hy');
+	hy.textContent = new Date().getFullYear();
+</script>
+
+
+<script type="text/javascript">
+//script TEMPO
+	const ea = document.getElementById('ea');
+	ea.textContent = new Date().getFullYear();
+</script>
+
+
+
+<script type="text/javascript">
+//script TEMPO
+	const ye = document.getElementById('ye');
+	ye.textContent = new Date().getFullYear();
+</script>
+
+
+
+<script type="text/javascript">
+//script TEMPO
+	const ya = document.getElementById('ya');
+	ya.textContent = new Date().getFullYear();
+</script>
+
+
+<script type="text/javascript">
+//script TEMPO
+	const yha = document.getElementById('yha');
+	yha.textContent = new Date().getFullYear();
+</script>
+
+
+<script type="text/javascript">
+//script TEMPO
+	const yhe = document.getElementById('yhe');
+	yhe.textContent = new Date().getFullYear();
+</script>
+
+
+<script type="text/javascript">
+//Script POST
+let slides = document.querySelectorAll('.slide');
+let index = 0;
+
+function next(){
+	slides[index].classList.remove('active');
+	index = (index + 1) % slides.length;
+	slides[index].classList.add('active');
+}
+function prev(){
+	slides[index].classList.remove('active');
+	index = (index - 1 + slides.length) % slides.length;
+	slides[index].classList.add('active');
+}
+</script>
+<script>
+//akwanzas CLICKS & CLICKS
+	setInterval("document.getElementById('next').click()", 10000);
+</script>
+
+
+<script type="text/javascript">
+//script ÁUDIO
+	var audio = new Audio();
+	audio.src = 'audio/i.mp3';
+</script>
+</body>
+</html>
