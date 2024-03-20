@@ -97,10 +97,10 @@
 	display: block;
 	cursor: pointer;
 	position: fixed;
-	font-size: 18px;
-	background: #111;
+	 padding: 6px 10px 9px;
+	 font-size: 16px;
+	 background: olive;
 	border-radius: 100px;
-	padding: 5px 8px 7px;
 	transition: all 0.4s ease;
 	border: 2px solid rgba(255,255,9,.3);
 	box-shadow: 0 0 0 2px #222,
@@ -147,7 +147,6 @@ border: lime;
 	 padding: 6px 10px 9px;
 	 font-size: 16px;
 	 background: olive;
-	 animation: box 4s all infinite;
 }
 .modalcontent0{
 	background: #aaaf99;
